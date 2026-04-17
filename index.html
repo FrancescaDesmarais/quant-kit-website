@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quant Kit — Studio sessions for designers who work with data</title>
+  <meta name="description" content="Build your quantitative palette, one technique at a time. Quant Kit teaches R and data analysis to designers as a creative practice." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '340975');
+  </script>
+  <!-- End MailerLite Universal -->
+
+  <style>
+    /* ===========================
+       RESET & BASE
+    =========================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #3C3C3C;
+      background-color: #FFFFFF;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: #000000;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #FF6B6B;
+    }
+
+    ul, ol {
+      padding-left: 1.4em;
+    }
+
+    /* ===========================
+       TYPOGRAPHY
+    =========================== */
+    h1 {
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #1A1A1A;
+    }
+
+    h2 {
+      font-size: 42px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #1A1A1A;
+    }
+
+    h3 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: #1A1A1A;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1A1A1A;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .mono {
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+    }
+
+    .coral {
+      color: #FF6B6B;
+    }
+
+    /* ===========================
+       LAYOUT
+    =========================== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    section.bg-grey {
+      background-color: #F5F5F5;
+    }
+
+    section.bg-white {
+      background-color: #FFFFFF;
+    }
+
+    /* ===========================
+       BUTTONS
+    =========================== */
+    .btn-primary {
+      display: inline-block;
+      background-color: #FF6B6B;
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 18px 40px;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background-color: #E85D75;
+      color: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+    }
+
+    /* ===========================
+       NAV
+    =========================== */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #EAECED;
+      padding: 20px 0;
+    }
+
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #1A1A1A;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-logo:hover {
+      color: #1A1A1A;
+    }
+
+    .nav-logo .logo-mark {
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+      color: #FF6B6B;
+      background-color: #FFF0F0;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .nav-cta {
+      font-size: 15px;
+    }
+
+    /* ===========================
+       HERO
+    =========================== */
+    #hero {
+      padding: 80px 0 100px;
+      background-color: #FFFFFF;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      margin-bottom: 24px;
+    }
+
+    .hero-tagline {
+      font-size: 20px;
+      font-weight: 400;
+      color: #3C3C3C;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .hero-image-wrap {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    /* ===========================
+       THE PROBLEM
+    =========================== */
+    .problem-headline {
+      max-width: 720px;
+      margin-bottom: 40px;
+    }
+
+    .problem-body {
+      max-width: 760px;
+    }
+
+    /* ===========================
+       THE SOLUTION
+    =========================== */
+    .solution-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .solution-intro h2 {
+      margin-bottom: 24px;
+    }
+
+    .solution-steps {
+      list-style: none;
+      padding: 0;
+      counter-reset: steps;
+    }
+
+    .solution-steps li {
+      counter-increment: steps;
+      display: flex;
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    .solution-steps li:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-number {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background-color: #FF6B6B;
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .step-text strong {
+      display: block;
+      font-weight: 600;
+      color: #1A1A1A;
+      margin-bottom: 6px;
+    }
+
+    /* ===========================
+       THE VIBE
+    =========================== */
+    .vibe-header {
+      margin-bottom: 56px;
+    }
+
+    .vibe-header h2 {
+      margin-bottom: 12px;
+    }
+
+    .vibe-header p {
+      font-size: 20px;
+      color: #3C3C3C;
+    }
+
+    .vibe-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .vibe-card {
+      background-color: #FFFFFF;
+      border: 2px solid #EAECED;
+      border-radius: 12px;
+      padding: 32px;
+      transition: all 0.3s ease;
+    }
+
+    .vibe-card:hover {
+      border-color: #FF6B6B;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .vibe-card-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: #FF6B6B;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .vibe-card h4 {
+      margin-bottom: 14px;
+      font-size: 22px;
+    }
+
+    /* ===========================
+       THE TEACHER
+    =========================== */
+    .teacher-inner {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .teacher-photo {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #FF6B6B;
+    }
+
+    .teacher-content h2 {
+      margin-bottom: 28px;
+    }
+
+    /* ===========================
+       SIGN-UP
+    =========================== */
+    .signup-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .signup-content h2 {
+      margin-bottom: 24px;
+    }
+
+    .signup-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .signup-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #EAECED;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .signup-list li:last-child {
+      border-bottom: none;
+    }
+
+    .signup-list li::before {
+      content: '→';
+      color: #FF6B6B;
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .signup-list-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      color: #FF6B6B;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+      margin-top: 28px;
+    }
+
+    .signup-list-label:first-child {
+      margin-top: 0;
+    }
+
+    /* MailerLite form overrides */
+    .signup-form-wrap {
+      background-color: #FFFFFF;
+      border: 2px solid #FF6B6B;
+      border-radius: 12px;
+      padding: 48px;
+    }
+
+    /* Override MailerLite default styles */
+    #mlb2-40048798.ml-form-embedContainer {
+      display: block !important;
+    }
+
+    #mlb2-40048798.ml-form-embedContainer .ml-form-embedWrapper {
+      background-color: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      display: block !important;
+      width: 100% !important;
+    }
+
+    #mlb2-40048798.ml-form-embedContainer .ml-form-embedWrapper.embedDefault,
+    #mlb2-40048798.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    #mlb2-40048798.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+    #mlb2-40048798.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+      padding: 0 !important;
+    }
+
+    #mlb2-40048798.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+      font-family: 'Inter', Arial, sans-serif !important;
+      font-size: 16px !important;
+      padding: 14px 16px !important;
+      border: 1px solid #EAECED !important;
+      border-radius: 6px !important;
+      color: #3C3C3C !important;
+    }
+
+    #mlb2-40048798.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:focus {
+      border-color: #FF6B6B !important;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1) !important;
+    }
+
+    #mlb2-40048798.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button,
+    #mlb2-40048798.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
+      background-color: #FF6B6B !important;
+      border-color: #FF6B6B !important;
+      border-radius: 10px !important;
+      font-family: 'Inter', Arial, sans-serif !important;
+      font-size: 16px !important;
+      font-weight: 500 !important;
+      padding: 16px !important;
+      box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3) !important;
+      transition: all 0.2s ease !important;
+    }
+
+    #mlb2-40048798.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover,
+    #mlb2-40048798.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover {
+      background-color: #E85D75 !important;
+      border-color: #E85D75 !important;
+    }
+
+    #mlb2-40048798.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4 {
+      font-family: 'Inter', Arial, sans-serif !important;
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      color: #1A1A1A !important;
+    }
+
+    #mlb2-40048798.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p {
+      font-family: 'Inter', Arial, sans-serif !important;
+      font-size: 16px !important;
+      color: #3C3C3C !important;
+      line-height: 1.6 !important;
+    }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    footer {
+      background-color: #FFFFFF;
+      border-top: 1px solid #EAECED;
+      padding: 48px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-brand .logo-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1A1A1A;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .footer-brand .logo-text .logo-mark {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: #FF6B6B;
+      background-color: #FFF0F0;
+      padding: 3px 7px;
+      border-radius: 5px;
+    }
+
+    .footer-brand .footer-tagline {
+      font-size: 14px;
+      color: #3C3C3C;
+      margin-bottom: 0;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .footer-contact {
+      display: flex;
+      gap: 20px;
+      font-size: 15px;
+    }
+
+    .footer-copyright {
+      font-size: 14px;
+      color: #888;
+    }
+
+    /* ===========================
+       RESPONSIVE
+    =========================== */
+    @media (max-width: 900px) {
+      h1 { font-size: 48px; }
+      h2 { font-size: 32px; }
+      h3 { font-size: 26px; }
+      h4 { font-size: 22px; }
+
+      section { padding: 60px 0; }
+
+      .hero-inner,
+      .solution-inner,
+      .signup-inner,
+      .teacher-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-image-wrap {
+        order: -1;
+      }
+
+      .teacher-photo {
+        width: 100%;
+        height: 280px;
+      }
+
+      .vibe-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .signup-form-wrap {
+        padding: 32px 24px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-links {
+        align-items: flex-start;
+      }
+
+      nav .nav-cta {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 38px; }
+      h2 { font-size: 28px; }
+
+      .footer-contact {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <span class="logo-mark">R</span>
+        Quant Kit
+      </a>
+      <a href="#signup" class="btn-primary nav-cta">Join the founding studio</a>
+    </div>
+  </nav>
+
+
+  <!-- 1. HERO -->
+  <section id="hero" class="bg-white">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1>Quant<br /><span class="coral">Kit.</span></h1>
+          <p class="hero-tagline">Build your quantitative palette,<br />one technique at a time.</p>
+          <a href="#signup" class="btn-primary">Join the founding studio</a>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="Images/quant-kit-hero.png" alt="RStudio with data visualisation — the Quant Kit learning environment" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 2. THE PROBLEM -->
+  <section id="problem" class="bg-grey">
+    <div class="container">
+      <h2 class="problem-headline">Data is a super power<br />for designers.</h2>
+      <div class="problem-body">
+        <p>UX. Product. Service. All these professions rely on solid insights — about the people we design for and whether our concepts actually work. A key part of our craft is discovering these insights, intuitively shaping solutions, and iterating until we've got something we feel confident in. Qualitative insights are gold. Creative leaps and taste are essential. And quantitative skills can be one of the many powers in your creative practice.</p>
+        <p>Know how to conduct user research? Check. How robust are the patterns and needs you identify?<br />
+        Know how to identify an opportunity? Check. What scale are we talking about?<br />
+        Know how to make prototypes? Check. What can you reliably infer from the way people are using your prototypes?</p>
+        <p>Especially in an era where the data streams are turned on full volume, where professions are melting and merging, and where it's possible to code in seconds — Quant Kit unlocks the world of data science for designers.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 3. THE SOLUTION -->
+  <section id="solution" class="bg-white">
+    <div class="container">
+      <div class="solution-inner">
+        <div class="solution-intro">
+          <h2>What is Quant Kit?</h2>
+          <p>Quant Kit is data analysis taught as a creative practice, by a designer, for designers.</p>
+          <p>Quant Kit provides studio sessions to build your data practice, piece by piece. Designed to be something you explore lightly each week, Quant Kit helps you build techniques, vocabulary, and the mindset to work quantitatively.</p>
+        </div>
+        <ol class="solution-steps">
+          <li>
+            <div class="step-number">1</div>
+            <div class="step-text">
+              <strong>Set up your studio.</strong>
+              Get started with RStudio — your sandbox for learning R, data analysis, and thinking like a statistician.
+            </div>
+          </li>
+          <li>
+            <div class="step-number">2</div>
+            <div class="step-text">
+              <strong>Weekly Practice.</strong>
+              Each week, you get a short (20 min) session that you can follow at your own pace. Read next to RStudio, follow along, practice.
+            </div>
+          </li>
+          <li>
+            <div class="step-number">3</div>
+            <div class="step-text">
+              <strong>Build Your Own Journey.</strong>
+              Start with the foundations and then choose the studio sessions that are most relevant for your own practice and learning journey.
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 4. THE VIBE -->
+  <section id="vibe" class="bg-grey">
+    <div class="container">
+      <div class="vibe-header">
+        <h2>What to expect</h2>
+      </div>
+      <div class="vibe-cards">
+
+        <div class="vibe-card">
+          <p class="vibe-card-tag mono">Format</p>
+          <h4>Email-based, no fluff</h4>
+          <p>One session per week in your inbox. Open it next to RStudio, follow along, practice. No videos to watch at 1.5x speed. No platform to log into. No discussion forums you'll never visit. Just you, code, and whatever snacks or beverages get you in a good mood.</p>
+        </div>
+
+        <div class="vibe-card">
+          <p class="vibe-card-tag mono">Method</p>
+          <h4>Practice, not theory</h4>
+          <p>You'll write code from Session 1. Some of it will work. Some won't. You'll get error messages. This is completely normal and actually the point. Learning happens when you're slightly confused and working through it.</p>
+        </div>
+
+        <div class="vibe-card">
+          <p class="vibe-card-tag mono">Spirit</p>
+          <h4>Nerdy, quirky, never boring</h4>
+          <p>Full disclosure: data is genuinely exciting. Expect curiosity, occasional bad metaphors, honest talk about what's hard, and probably some tangents about the wild history of statistics. This is an adventure — sometimes challenging, sometimes funny, always rewarding.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 5. THE TEACHER -->
+  <section id="about" class="bg-white">
+    <div class="container">
+      <div class="teacher-inner">
+        <div>
+          <img src="Images/quant-kit-about.png" alt="Francesca Desmarais, designer and creator of Quant Kit" class="teacher-photo" />
+        </div>
+        <div class="teacher-content">
+          <h2>Who's teaching this?</h2>
+          <p>Hi! I'm Francesca.</p>
+          <p>I'm a designer with an economics background. My undergrad was spent in courses like econometrics and statistics. The first program I ever made analysed student feedback surveys for my Econ department — cutting analysis time by 90%.</p>
+          <p>I made the, not so common, transition to the world of service design and over the past ten years I've merged my quantitative roots with my design practice. I've helped designers validate the scale of a pattern or opportunity they identify, build robust segments that blend qualitative insights and quantitative analyses of behaviors, test different design hypotheses, and model potential solutions.</p>
+          <p>My quantitative approach is explorative. I don't work like a pure data scientist. I know enough about the rules of data and statistics to have a robust foundation, but I approach each problem from a creative angle. It's explorative and builds into the strategic and more intuitive decisions across my design process. And it's a never ending learning journey.</p>
+          <p>I believe quantitative work can be part of your craft, woven into how you think and design, the same way you learned other tools. I'm here to share what I've learned and help you get comfortable with data — comfortable enough to use it, question it, visualise it, and make better design decisions.</p>
+          <p>Want to experiment with me? <span class="coral">Let's build your quant practice together.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 6. SIGN-UP -->
+  <section id="signup" class="bg-grey">
+    <div class="container">
+      <div class="signup-inner">
+        <div class="signup-content">
+          <h2>Join the founding studio</h2>
+          <p>Help shape Quant Kit from the ground up (and get free access)</p>
+          <p>Quant Kit is brand new. I've got the structure for a 10-week introduction to R and statistics — but I want to build it so that it's actually valuable for designers. So in true prototyping fashion, I need a small group of brave souls to join me on this mission. Share your motivation and goals, try out the sessions, break things, ask questions, and help me understand what works and what needs work.</p>
+
+          <p class="signup-list-label mono">What you get</p>
+          <ul class="signup-list">
+            <li>Free access to the entire 10-weeks of foundational studio sessions</li>
+            <li>First look at new studio sessions before anyone else</li>
+            <li>Direct access to Francesca for questions, struggles, "wait what does this mean?"</li>
+            <li>The satisfaction of shaping something useful for you (and other designers)</li>
+          </ul>
+
+          <p class="signup-list-label mono">What I need from you</p>
+          <ul class="signup-list">
+            <li>Do the 10 weeks (20–30 mins per week)</li>
+            <li>Tell me what's confusing, what clicks, what you wish I'd explained differently</li>
+            <li>Your ideas, wishes and feedback: 15-min check-in chat at the start, middle and end</li>
+            <li>Bring your real questions and struggles — the messy stuff is the useful stuff</li>
+            <li>No catch. Just honest collaboration.</li>
+          </ul>
+        </div>
+
+        <div class="signup-form-wrap">
+          <div class="ml-embedded" data-form="UxF4vr"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 7. FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo-text">
+            <span class="logo-mark">R</span>
+            Quant Kit
+          </div>
+          <p class="footer-tagline">Studio sessions for designers who work with data</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-contact">
+            <a href="mailto:hello@quantkit.design">hello@quantkit.design</a>
+            <a href="https://www.linkedin.com/company/quantkit" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+          <p class="footer-copyright">© 2026 Quant Kit</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

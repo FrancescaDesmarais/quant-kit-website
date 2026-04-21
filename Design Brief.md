@@ -36,14 +36,14 @@ Join the founding studio
 ### 2. The Outcome
 
 #### Headline
-Supercharge your data practice to enact change in your organisation
+Amplify your practice. Drive change.
 
 #### Body
-UX. Product. Service. All these professions rely on solid insights - about the people and systems we design for and whether our concepts actually work. A key part of our craft is discovering these insights, intuitively shaping solutions, and iterating until we’ve got something we feel confident with. 
+UX. Product. Service. All these professions rely on solid insights — about the people and systems we design for and whether our concepts actually work. A key part of our craft is discovering these insights, intuitively shaping solutions, and iterating until we’ve got something we feel confident with. 
 
 Quantitative skills can amplify and support your design practice.
   
-In an era where the data streams are turned on full volume, where professions are melting and merging, and where it’s possible to code in seconds - Quant Kit unlocks the world of data science for designers.
+In an era where the data streams are turned on full volume, where professions are melting and merging, and where it’s possible to code in seconds — Quant Kit unlocks the world of data science for designers.
 
 
 ### 3. The Solution
@@ -57,7 +57,7 @@ Quant Kit is data analysis taught as a creative practice, by a designer, for des
 Quant Kit provides studio sessions to build your data practice, piece by piece. Designed to be something you explore lightly each week, Quant Kit helps you build techniques, vocabulary, and the mindset to work quantitively.
 
 #### Ordered List
-1. Set up your studio. Get started with RStudio - your sandbox for learning R, data analysis, and thinking like a statistician.
+1. Set up your studio. Get started with RStudio — your sandbox for learning R, data analysis, and thinking like a statistician.
 2. Weekly Practice. Each week, you get a short (20 min) session that you can follow at your own pace. Read next to RStudio, follow along, practice.
 3. Build Your Own Journey. Start with the foundations and then choose the studio sessions that are most relevant for your own practice and learning journey.
 
@@ -83,7 +83,7 @@ Who’s teaching this?
 #### Body
 Hi! I’m Francesca.
 
-I’m a designer with an economics background. My undergrad was spent in courses like econometrics and statistics. The first program I ever made analysed student feedback surveys for my Econ department - cutting analysis time by 90%.
+I’m a designer with an economics background. My undergrad was spent in courses like econometrics and statistics. The first program I ever made analysed student feedback surveys for my Econ department — cutting analysis time by 90%.
 
 I made the, not so common, transition to the world of service design and over the past ten years I’ve merged my quantitative roots with my design practice. I’ve helped designers validate the scale of a pattern or opportunity they identify, build robust segments that blend qualitative insights and quantitative analyses of behaviors, test different design hypotheses, and model potential solutions.
 
@@ -101,7 +101,7 @@ Join the founding studio
 
 #### Body
 Help shape Quant Kit from the ground up (and get free access)
-Quant Kit is brand new. I’ve got the structure for a 10-week introduction to R and statistics - but I want to build it so that it’s actually valuable for designers. So in true prototyping fashion, I need a small group of brave souls to join me on this mission. Share with me your motivation and goals, try out the sessions, break things, ask questions, and help me understand what works and what needs work.
+Quant Kit is brand new. I’ve got the structure for a 10-week introduction to R and statistics — but I want to build it so that it’s actually valuable for designers. So in true prototyping fashion, I need a small group of brave souls to join me on this mission. Share with me your motivation and goals, try out the sessions, break things, ask questions, and help me understand what works and what needs work.
 
 **What you get:**
 - Free access to the entire 10-weeks of foundational studio sessions
@@ -110,7 +110,7 @@ Quant Kit is brand new. I’ve got the structure for a 10-week introduction to R
 - The satisfaction of shaping something useful for you (and other designers)
 
 **What I need from you:**
-- Do the 10 weeks (20-30 mins per week)
+- Do the 10 weeks (20–30 mins per week)
 - Tell me what's confusing, what clicks, what you wish I'd explained differently
 - Your ideas, wishes and feedback: 15-min check-in chat at the start, middle and end
 - Bring your real questions and struggles — the messy stuff is the useful stuff

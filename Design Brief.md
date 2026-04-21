@@ -40,8 +40,6 @@ Amplify your practice. Drive change.
 
 #### Body
 UX. Product. Service. All these professions rely on solid insights — about the people and systems we design for and whether our concepts actually work. A key part of our craft is discovering these insights, intuitively shaping solutions, and iterating until we’ve got something we feel confident with. 
-
-Quantitative skills can amplify and support your design practice.
   
 In an era where the data streams are turned on full volume, where professions are melting and merging, and where it’s possible to code in seconds — Quant Kit unlocks the world of data science for designers.
 

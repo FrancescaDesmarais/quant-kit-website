@@ -12,7 +12,7 @@
 ## Page Structure
 
 1. Hero & CTA: brief introduction and key action for website visitor
-2. The Problem: why does the designer need quant kit)
+2. The Outcome: why does the designer need quant kit
 3. The Solution: what is Quant Kit and how it works
 4. The Vibe: what Quant Kit will feel like for the designer embarking on this learning journey with Francesca
 5. The Teacher: about Francesca
@@ -23,29 +23,27 @@
 
 ### 1. Hero & CTA
 
-#### Title 
+#### Title
 Quant Kit
 
 #### Tagline
 Build your quantitative palette, one technique at a time.
 
-#### Button 
+#### Button
 Join the founding studio
 
 
-### 2. The Problem
+### 2. The Outcome
 
 #### Headline
-Data is a super power for designers.
+Supercharge your data practice to enact change in your organisation
 
 #### Body
-UX. Product. Service. All these professions rely on solid insights - about the people we design for and whether our concepts actually work. A key part of our craft is discovering these insights, intuitively shaping solutions, and iterating until we’ve got something we feel confident in. Qualitative insights are gold. Creative leaps and taste are essential. And quantitative skills can be one of the many powers in your creative practice.   
+UX. Product. Service. All these professions rely on solid insights - about the people and systems we design for and whether our concepts actually work. A key part of our craft is discovering these insights, intuitively shaping solutions, and iterating until we’ve got something we feel confident with. 
+
+Quantitative skills can amplify and support your design practice.
   
-Know how to conduct user research? Check. How robust are the patterns and needs you identify?
-Know how to identify an opportunity? Check. What scale are we talking about?
-Know how to make prototypes? Check. What can you reliably infer from the way people are using your prototypes?  
-  
-Especially in an era where the data streams are turned on full volume, where professions are melting and merging, and where it’s possible to code in seconds - Quant Kit unlocks the world of data science for designers.
+In an era where the data streams are turned on full volume, where professions are melting and merging, and where it’s possible to code in seconds - Quant Kit unlocks the world of data science for designers.
 
 
 ### 3. The Solution

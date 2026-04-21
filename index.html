@@ -147,7 +147,6 @@
       font-family: 'Inter', sans-serif;
       font-size: 16px;
       font-weight: 500;
-      box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
       transition: all 0.2s ease;
       border: none;
       cursor: pointer;
@@ -157,7 +156,6 @@
       background-color: #E85D75;
       color: #FFFFFF;
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
     }
 
     /* ===========================
@@ -179,27 +177,14 @@
     }
 
     .nav-logo {
-      font-family: 'Inter', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      color: #1A1A1A;
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 8px;
     }
 
-    .nav-logo:hover {
-      color: #1A1A1A;
-    }
-
-    .nav-logo .logo-mark {
-      font-family: 'Space Mono', monospace;
-      font-size: 14px;
-      color: #FF6B6B;
-      background-color: #FFF0F0;
-      padding: 4px 8px;
-      border-radius: 6px;
+    .nav-logo img {
+      height: 32px;
+      width: auto;
     }
 
     .nav-cta {
@@ -236,23 +221,25 @@
     .hero-image-wrap {
       border-radius: 12px;
       overflow: hidden;
+      aspect-ratio: 1 / 1;
     }
 
     .hero-image-wrap img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       border-radius: 12px;
     }
 
     /* ===========================
-       THE PROBLEM
+       THE OUTCOME
     =========================== */
-    .problem-headline {
+    .outcome-headline {
       max-width: 720px;
       margin-bottom: 40px;
     }
 
-    .problem-body {
+    .outcome-body {
       max-width: 760px;
     }
 
@@ -417,9 +404,10 @@
       content: '→';
       color: #FF6B6B;
       font-family: 'Space Mono', monospace;
-      font-size: 14px;
+      font-size: 20px;
+      font-weight: 700;
       flex-shrink: 0;
-      margin-top: 2px;
+      margin-top: 0px;
     }
 
     .signup-list-label {
@@ -492,7 +480,6 @@
       font-size: 16px !important;
       font-weight: 500 !important;
       padding: 16px !important;
-      box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3) !important;
       transition: all 0.2s ease !important;
     }
 
@@ -533,23 +520,11 @@
       gap: 24px;
     }
 
-    .footer-brand .logo-text {
-      font-size: 18px;
-      font-weight: 700;
-      color: #1A1A1A;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
-
-    .footer-brand .logo-text .logo-mark {
-      font-family: 'Space Mono', monospace;
-      font-size: 12px;
-      color: #FF6B6B;
-      background-color: #FFF0F0;
-      padding: 3px 7px;
-      border-radius: 5px;
+    .footer-brand .logo-img {
+      height: 28px;
+      width: auto;
+      display: block;
+      margin-bottom: 8px;
     }
 
     .footer-brand .footer-tagline {
@@ -601,7 +576,8 @@
 
       .teacher-photo {
         width: 100%;
-        height: 280px;
+        height: auto;
+        aspect-ratio: 1 / 1;
       }
 
       .vibe-cards {
@@ -644,8 +620,7 @@
   <nav>
     <div class="container">
       <a href="#" class="nav-logo">
-        <span class="logo-mark">R</span>
-        Quant Kit
+        <img src="Images/logo-horizontal.svg" alt="Quant Kit" />
       </a>
       <a href="#signup" class="btn-primary nav-cta">Join the founding studio</a>
     </div>
@@ -669,16 +644,14 @@
   </section>
 
 
-  <!-- 2. THE PROBLEM -->
-  <section id="problem" class="bg-grey">
+  <!-- 2. THE OUTCOME -->
+  <section id="outcome" class="bg-grey">
     <div class="container">
-      <h2 class="problem-headline">Data is a super power<br />for designers.</h2>
-      <div class="problem-body">
-        <p>UX. Product. Service. All these professions rely on solid insights — about the people we design for and whether our concepts actually work. A key part of our craft is discovering these insights, intuitively shaping solutions, and iterating until we've got something we feel confident in. Qualitative insights are gold. Creative leaps and taste are essential. And quantitative skills can be one of the many powers in your creative practice.</p>
-        <p>Know how to conduct user research? Check. How robust are the patterns and needs you identify?<br />
-        Know how to identify an opportunity? Check. What scale are we talking about?<br />
-        Know how to make prototypes? Check. What can you reliably infer from the way people are using your prototypes?</p>
-        <p>Especially in an era where the data streams are turned on full volume, where professions are melting and merging, and where it's possible to code in seconds — Quant Kit unlocks the world of data science for designers.</p>
+      <h2 class="outcome-headline">Supercharge your data practice to enact change in your organisation</h2>
+      <div class="outcome-body">
+        <p>UX. Product. Service. All these professions rely on solid insights — about the people and systems we design for and whether our concepts actually work. A key part of our craft is discovering these insights, intuitively shaping solutions, and iterating until we've got something we feel confident with.</p>
+        <p>Quantitative skills can amplify and support your design practice.</p>
+        <p>In an era where the data streams are turned on full volume, where professions are melting and merging, and where it's possible to code in seconds — Quant Kit unlocks the world of data science for designers.</p>
       </div>
     </div>
   </section>
@@ -813,10 +786,7 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <div class="logo-text">
-            <span class="logo-mark">R</span>
-            Quant Kit
-          </div>
+          <img src="Images/logo-horizontal.svg" alt="Quant Kit" class="logo-img" />
           <p class="footer-tagline">Studio sessions for designers who work with data</p>
         </div>
         <div class="footer-links">

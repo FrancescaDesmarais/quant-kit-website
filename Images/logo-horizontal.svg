@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" width="220" height="56">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&amp;display=swap');</style>
+  </defs>
+
+  <!--
+    3×3 dot grid — X-pattern of secondary brand colours, coral anchors bottom-right
+    Steel blue  #4682B4  · Forest green  #228B22  · Purple  #9370DB
+    Light grey  #EAECED  · Coral (hero)  #FF6B6B
+  -->
+
+  <!-- Row 1 -->
+  <circle cx="10" cy="14" r="4.5" fill="#4682B4"/>
+  <circle cx="24" cy="14" r="4.5" fill="#EAECED"/>
+  <circle cx="38" cy="14" r="4.5" fill="#9370DB"/>
+
+  <!-- Row 2 -->
+  <circle cx="10" cy="28" r="4.5" fill="#EAECED"/>
+  <circle cx="24" cy="28" r="4.5" fill="#228B22"/>
+  <circle cx="38" cy="28" r="4.5" fill="#EAECED"/>
+
+  <!-- Row 3 -->
+  <circle cx="10" cy="42" r="4.5" fill="#9370DB"/>
+  <circle cx="24" cy="42" r="4.5" fill="#EAECED"/>
+  <circle cx="38" cy="42" r="4.5" fill="#FF6B6B"/>
+
+  <!-- Divider -->
+  <line x1="56" y1="14" x2="56" y2="42" stroke="#EAECED" stroke-width="1.5"/>
+
+  <!-- Wordmark -->
+  <text x="66" y="28" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" dominant-baseline="middle">Quant Kit</text>
+</svg>

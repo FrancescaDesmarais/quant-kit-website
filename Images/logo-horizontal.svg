@@ -25,9 +25,6 @@
   <circle cx="24" cy="42" r="4.5" fill="#EAECED"/>
   <circle cx="38" cy="42" r="4.5" fill="#FF6B6B"/>
 
-  <!-- Divider -->
-  <line x1="56" y1="14" x2="56" y2="42" stroke="#EAECED" stroke-width="1.5"/>
-
   <!-- Wordmark -->
   <text x="66" y="28" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" dominant-baseline="middle">Quant Kit</text>
 </svg>

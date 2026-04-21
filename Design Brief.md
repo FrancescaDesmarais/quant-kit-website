@@ -39,7 +39,7 @@ Join the founding studio
 Amplify your practice. Drive change.
 
 #### Body
-UX. Product. Service. All these professions rely on solid insights — about the people and systems we design for and whether our concepts actually work. A key part of our craft is discovering these insights, intuitively shaping solutions, and iterating until we’ve got something we feel confident with. 
+UX. Product. Service. All these professions rely on solid insights — about the people and systems we design for and whether our concepts actually work. Quantitative skills can help you measure the scale of the patterns you identify and communicate potential impacts of a design decision.
   
 In an era where the data streams are turned on full volume, where professions are melting and merging, and where it’s possible to code in seconds — Quant Kit unlocks the world of data science for designers.
 

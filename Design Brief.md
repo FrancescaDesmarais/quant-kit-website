@@ -102,16 +102,16 @@ Help shape Quant Kit from the ground up (and get free access)
 Quant Kit is brand new. I’ve got the structure for a 10-week introduction to R and statistics — but I want to build it so that it’s actually valuable for designers. So in true prototyping fashion, I need a small group of brave souls to join me on this mission. Share with me your motivation and goals, try out the sessions, break things, ask questions, and help me understand what works and what needs work.
 
 **What you get:**
-- Free access to the entire 10-weeks of foundational studio sessions
-- First look at new studio sessions before anyone else
-- Direct access to me for questions, struggles, "wait what does this mean?"
-- The satisfaction of shaping something useful for you (and other designers)
+- Free access to the entire 10-weeks of foundational studio sessions.
+- First look at new studio sessions before anyone else.
+- Direct access to me for questions, struggles, "wait what does this mean?”
+- The satisfaction of shaping something useful for you (and other designers).
 
 **What I need from you:**
-- Do the 10 weeks (20–30 mins per week)
-- Tell me what's confusing, what clicks, what you wish I'd explained differently
-- Your ideas, wishes and feedback: 15-min check-in chat at the start, middle and end
-- Bring your real questions and struggles — the messy stuff is the useful stuff
+- Do the 10 weeks (20–30 mins per week).
+- Tell me what's confusing, what clicks, what you wish I'd explained differently.
+- Your ideas, wishes and feedback: 15-min check-in chat at the start, middle and end.
+- Bring your real questions and struggles — the messy stuff is the useful stuff.
 - No catch. Just honest collaboration.
 
 #### Form
